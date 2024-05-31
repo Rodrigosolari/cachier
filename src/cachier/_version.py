@@ -6,11 +6,10 @@
 # Copyright (c) 2024, Jirka Borovec <***@gmail.com>
 
 import os
-from .version import VERSION
 
 _RELEASING_PROCESS = os.getenv("RELEASING_PROCESS", "0") == "1"
 
-__version__ = VERSION.strip()
+__version__ = "3.0.0".strip()
 
 
 def _get_git_sha() -> str:
