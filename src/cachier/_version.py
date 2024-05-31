@@ -6,13 +6,11 @@
 # Copyright (c) 2024, Jirka Borovec <***@gmail.com>
 
 import os
+from version import VERSION
 
-_PATH_HERE = os.path.dirname(__file__)
-_PATH_VERSION = os.path.join(_PATH_HERE, "version.info")
 _RELEASING_PROCESS = os.getenv("RELEASING_PROCESS", "0") == "1"
 
-with open(_PATH_VERSION) as fopen:
-    __version__ = fopen.read().strip()
+__version__ = VERSION
 
 
 def _get_git_sha() -> str:
